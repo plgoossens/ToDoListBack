@@ -9,6 +9,7 @@ on:
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
+    environment: PL VPS
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v4
@@ -32,6 +33,7 @@ jobs:
   deploy:
     needs: build_and_push
     runs-on: ubuntu-latest
+    environment: PL VPS
     steps:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
