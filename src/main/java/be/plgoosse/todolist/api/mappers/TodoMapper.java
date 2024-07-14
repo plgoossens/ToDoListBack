@@ -34,6 +34,7 @@ public class TodoMapper {
         TodoDTO todoDTO = new TodoDTO();
         todoDTO.setId(todo.getId());
         todoDTO.setContent(todo.getContent());
+        todoDTO.setChecked(todo.getChecked());
         return todoDTO;
     }
 }

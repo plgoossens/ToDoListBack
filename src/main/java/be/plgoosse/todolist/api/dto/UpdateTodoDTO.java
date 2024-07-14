@@ -1,20 +1,11 @@
 package be.plgoosse.todolist.api.dto;
 
-public class TodoDTO {
+public class UpdateTodoDTO {
 
-    private Long id;
     private String content;
     private Boolean checked;
 
-    public TodoDTO() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public UpdateTodoDTO() {
     }
 
     public String getContent() {

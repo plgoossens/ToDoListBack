@@ -2,6 +2,7 @@ package be.plgoosse.todolist.api;
 
 import be.plgoosse.todolist.api.dto.CreateTodoDTO;
 import be.plgoosse.todolist.api.dto.TodoDTO;
+import be.plgoosse.todolist.api.dto.UpdateTodoDTO;
 import be.plgoosse.todolist.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,5 +30,10 @@ public class TodoController {
     @DeleteMapping("/{id}")
     public void deleteTodo(@PathVariable Long id) {
         todoService.deleteTodo(id);
+    }
+
+    @PutMapping("/{id}")
+    public TodoDTO updateTodo(@PathVariable Long id, @RequestBody UpdateTodoDTO updateTodoDTO) {
+        return todoService.updateTodo(id, updateTodoDTO);
     }
 }

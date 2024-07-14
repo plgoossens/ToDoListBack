@@ -13,6 +13,9 @@ public class Todo {
     @Column
     private String content;
 
+    @Column
+    private Boolean checked;
+
     public Todo() {
     }
 
@@ -26,5 +29,13 @@ public class Todo {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
     }
 }
